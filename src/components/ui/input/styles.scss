@@ -1,0 +1,68 @@
+.ui-input {
+  position: relative;
+  display: block;
+  margin-bottom: 6px;
+
+  &--with-label {
+    .ui-input__field {
+      padding-top: 24px;
+    }
+  }
+}
+
+.ui-input__label {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(44, 44, 44, 0.4);
+  @include transition();
+}
+
+.ui-input__field:focus ~ .ui-input__label, .ui-input--has-value .ui-input__label {
+  font-size: 11px;
+  line-height: 14px;
+  margin-top: -9px;
+}
+
+.ui-input__field {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 14px;
+  color: $black;
+  height: 46px;
+  padding: 14px 20px 14px 20px;
+  border: unset;
+  width: 100%;
+  @include transition();
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+  &:focus, &:hover {
+    outline: unset;
+    border-color: $black;
+  }
+}
+
+.ui-input__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 21px;
+}
+
+.ui-input__error {
+  display: flex;
+  padding-top: 2px;
+
+  span {
+    font-size: 9px;
+    line-height: 10px;
+    color: $red;
+  }
+}

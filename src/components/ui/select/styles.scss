@@ -1,0 +1,19 @@
+.ui-select {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 14px;
+  color: $black;
+  height: 46px;
+  padding: 14px 20px 14px 20px;
+  border: unset;
+  width: 100%;
+  @include transition();
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+  &:focus, &:hover {
+    outline: unset;
+    border-color: $black;
+  }
+}

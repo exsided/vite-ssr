@@ -1,0 +1,17 @@
+// стандартный transition
+// пример использования
+// .class
+// {
+//  @include transition()
+// }
+@mixin transition($seconds: 0.2s) {
+  transition: $seconds ease;
+}
+
+@mixin hover() {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
